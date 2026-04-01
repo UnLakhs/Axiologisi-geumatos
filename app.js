@@ -25,9 +25,21 @@ function saveResponse(choice) {
     localStorage.setItem("mealRatings", JSON.stringify(data));
 
     // Show thank you message
-    document.getElementById("thanksMessage").style.display = "block";
+     const thanks = document.getElementById("thanksMessage");
 
-    console.log("Updated counts:", data);
+    // Εμφάνιση
+    thanks.style.display = "block";
+    thanks.classList.remove("fade-out");
+
+    // Εξαφάνιση μετά από 2s
+    setTimeout(() => {
+        thanks.classList.add("fade-out");
+
+        // τελείως hide μετά το animation
+        setTimeout(() => {
+            thanks.style.display = "none";
+        }, 500);
+    }, 2000);
 }
 
 // Optional: Get results (for debugging or future UI)

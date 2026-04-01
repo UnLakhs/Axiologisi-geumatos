@@ -157,6 +157,15 @@ button:hover::before {
     margin-top: 5px;
 }
 
+.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to   { opacity: 0; transform: translateY(-20px); }
+}
+
 .fill {
     height: 100%;
     background: #4caf50;
