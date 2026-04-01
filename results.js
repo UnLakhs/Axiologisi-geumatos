@@ -16,7 +16,7 @@ function loadResults() {
         const percentage = total > 0 ? ((count / total) * 100).toFixed(1) : 0;
 
         html += `
-            <div class="result-item">
+            <div class="result-item" style="color: white;">
                 <strong>${key}</strong>: ${count} (${percentage}%)
                 <div class="bar">
                     <div class="fill" style="width:${percentage}%"></div>
@@ -27,10 +27,4 @@ function loadResults() {
 
     container.innerHTML = html;
 }
-
-function clearResults() {
-    localStorage.removeItem("mealRatings");
-    loadResults();
-}
-
 loadResults();
