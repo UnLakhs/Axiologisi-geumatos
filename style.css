@@ -145,6 +145,23 @@ button:hover::before {
     animation: fadeIn 0.5s ease;
 }
 
+.result-item {
+    margin-bottom: 15px;
+}
+
+.bar {
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.fill {
+    height: 100%;
+    background: #4caf50;
+}
+
 /* Fade animation */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
